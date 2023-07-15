@@ -1,5 +1,6 @@
 package com.rhyno.club.controller;
 
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -16,8 +17,7 @@ public class Home {
 
 	@GetMapping(value = "/welcome")
 	public ResponseEntity<String> getWelcomeMessage() {
-		throw new RuntimeException();
-		//return new ResponseEntity<String>("Welcome Ravikiran", HttpStatus.ACCEPTED);
+		return new ResponseEntity<String>("Welcome Ravikiran", HttpStatus.ACCEPTED);
 	}
 
 	@GetMapping(value = "/error")
